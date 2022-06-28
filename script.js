@@ -2,7 +2,11 @@ let musica = document.querySelector('audio')
 
 let duracaoMusica = document.querySelector('.fim')
 
-duracaoMusica.textContent = Math.floor(musica.duration)
+let imagem = document.querySelector('img')
+let nomeMusica = document.querySelector('.descricao h2')
+let nomeArtista = document.querySelector('.descricao i')
+
+duracaoMusica.innerHTML = segundosParaMinutos(Math.floor(musica.duration))
 
 function tocarMusica() {
     musica.play()
